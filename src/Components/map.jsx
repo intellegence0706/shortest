@@ -10,8 +10,6 @@ import blueMarker from '../Assets/pin_blue_50.png';
 import redMarker from '../Assets/pin_red_50.png';
 
 const MapComponent = () => {
-    const [map, setMap] = useState();
-    const [data, setData] = useState(null);
     const [fromposition, setFromPosition] = useState('');
     const [roadData, setRoadData] = useState(null);
     const [toposition, setToPosition] = useState('');
@@ -31,7 +29,6 @@ const MapComponent = () => {
         popupAnchor: [0, -40]
     });
     useEffect(() => {
-        setData(geojsonData);
         setRoadData(shortest_data);
     }, []);
     const handleFromPositionChange = (event) => {
@@ -44,7 +41,7 @@ const MapComponent = () => {
     console.log(roadData);
     return (
         <div>
-            <MapContainer center={centroid_coords} zoom={9} style={{ height: '950px' }} whenCreated={setMap}>
+            <MapContainer center={centroid_coords} zoom={9} style={{ height: '950px' }}>
                 <div className="search_box_from d-flex">
                     <input 
                         className="form-control border-end-0 border " 
