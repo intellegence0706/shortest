@@ -10,17 +10,22 @@
     right: 10px !important;
     z-index: 9999;
 }
+.form-control:focus {
+    outline: 1px solid blue !important;
+    box-shadow: unset;
+}
 .search_box_distance {
     position: absolute;
     top: 100px;
     right: 10px !important;
     z-index: 9999;
+    
 }
 
 .polyline {
     z-index: 9999;
 }
 
-.distance-box {
+/* .distance-box {
     padding-right: 50px !important;
-}
+} */

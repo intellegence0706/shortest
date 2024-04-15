@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import '../Assets/bootstrap.min.css';
 import 'leaflet/dist/leaflet.css';
 import { MapContainer, TileLayer, Marker, Popup, Polyline} from 'react-leaflet';
 import L from 'leaflet';
@@ -7,7 +8,6 @@ import geojsonData from '../Assets/data/centroid.json';
 import shortest_data from '../Assets/data/shortest_path.json'
 import blueMarker from '../Assets/pin_blue_50.png';
 import redMarker from '../Assets/pin_red_50.png';
-import '../Assets/bootstrap.min.css';
 
 const MapComponent = () => {
     const [map, setMap] = useState();
@@ -47,33 +47,25 @@ const MapComponent = () => {
             <MapContainer center={centroid_coords} zoom={9} style={{ height: '950px' }} whenCreated={setMap}>
                 <div className="search_box_from d-flex">
                     <input 
-                        className="form-control border-end-0 border rounded-pill" 
+                        className="form-control border-end-0 border " 
                         type="search" 
                         value={fromposition}
                         onChange={handleFromPositionChange}
                         id="example-search-input"
-                        placeholder="From..."
+                        placeholder="出発地"
                     />
-                    <span className="input-group-text">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-search" viewBox="0 0 16 16">
-                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
-                        </svg>
-                    </span>
+                    
                 </div>
                 <div className="search_box_to d-flex">
                     <input 
-                        className="form-control border-end-0 border rounded-pill" 
+                        className="form-control border-end-0 border" 
                         type="search" 
                         value={toposition}
                         onChange={handleToPositionChange}
                         id="example-search-input"
-                        placeholder="...To"
+                        placeholder="目的地"
                     />
-                    <span className="input-group-text">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-search" viewBox="0 0 16 16">
-                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
-                        </svg>
-                    </span>
+                    
                 </div>
                 <TileLayer
                     attribution='© OpenStreetMap contributors'
@@ -117,11 +109,11 @@ const MapComponent = () => {
                 ))}
                 <div className="search_box_distance">
                     <input 
-                        className="form-control border-end-0 border rounded-pill distance-box" 
+                        className="form-control border-end-0 border distance-box" 
                         type="search" 
                         value={distance}
                         id="example-search-input"
-                        placeholder="通り"
+                        placeholder="最短経路"
                         disabled
                     />
                 </div>
