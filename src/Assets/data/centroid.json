@@ -1,0 +1,14 @@
+{
+"type": "FeatureCollection",
+"name": "aa",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:EPSG::6668" } },
+"features": [
+{ "type": "Feature", "properties": { "fid": 1, "pref_code": "40", "name": "福岡県庁", "address": "福岡市博多区東公園7-7" }, "geometry": { "type": "Point", "coordinates": [ 130.4182166, 33.60676407 ] } },
+{ "type": "Feature", "properties": { "fid": 2, "pref_code": "41", "name": "佐賀県庁", "address": "佐賀市城内1-1-59" }, "geometry": { "type": "Point", "coordinates": [ 130.299816, 33.24957161 ] } },
+{ "type": "Feature", "properties": { "fid": 3, "pref_code": "42", "name": "長崎県庁", "address": "長崎市尾上町3-1" }, "geometry": { "type": "Point", "coordinates": [ 129.867795199999989, 32.75039611 ] } },
+{ "type": "Feature", "properties": { "fid": 4, "pref_code": "43", "name": "熊本県庁", "address": "熊本市中央区水前寺6-18-1" }, "geometry": { "type": "Point", "coordinates": [ 130.7415531, 32.78977926 ] } },
+{ "type": "Feature", "properties": { "fid": 5, "pref_code": "44", "name": "大分県庁", "address": "大分市大手町3-1-1" }, "geometry": { "type": "Point", "coordinates": [ 131.6125855, 33.23822757 ] } },
+{ "type": "Feature", "properties": { "fid": 6, "pref_code": "45", "name": "宮崎県庁", "address": "宮崎市橘通東2-10-1" }, "geometry": { "type": "Point", "coordinates": [ 131.423854799999987, 31.91108896 ] } },
+{ "type": "Feature", "properties": { "fid": 7, "pref_code": "46", "name": "鹿児島県庁", "address": "鹿児島市鴨池新町10-1" }, "geometry": { "type": "Point", "coordinates": [ 130.5579051, 31.56021827 ] } }
+]
+}
